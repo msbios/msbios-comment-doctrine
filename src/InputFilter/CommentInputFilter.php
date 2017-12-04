@@ -6,10 +6,13 @@
 
 namespace MSBios\Comment\Doctrine\InputFilter;
 
+use MSBios\Comment\Doctrine\Form\CommentForm;
 use Zend\Filter\StringTrim;
 use Zend\Filter\StripTags;
 use Zend\Filter\ToInt;
 use Zend\InputFilter\InputFilter;
+use Zend\Validator\Callback;
+use Zend\Validator\Csrf;
 use Zend\Validator\StringLength;
 
 /**
@@ -70,6 +73,14 @@ class CommentInputFilter extends InputFilter
                 ],
             ],
         ])->add([
+            'name' => 'csrf',
+            'required' => true,
+            'validators' => [
+                [
+                    'name' => Csrf::class,
+                ],
+            ],
+        ])->add([
             'name' => 'handler',
             'required' => true,
             'filters' => [
@@ -78,6 +89,17 @@ class CommentInputFilter extends InputFilter
                 ], [
                     'name' => StripTags::class,
                 ],
+            ],
+            'validators' => [
+                [
+                    'name' => Callback::class,
+                    'options' => [
+                        'callback' => function ($value) {
+                            return CommentForm::class == $value;
+                        }
+                    ]
+                ]
+
             ]
         ]);
     }

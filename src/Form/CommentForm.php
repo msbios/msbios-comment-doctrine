@@ -7,6 +7,7 @@
 namespace MSBios\Comment\Doctrine\Form;
 
 use Zend\Form\Element\Checkbox;
+use Zend\Form\Element\Csrf;
 use Zend\Form\Element\Hidden;
 use Zend\Form\Element\Submit;
 use Zend\Form\Element\Textarea;
@@ -42,6 +43,9 @@ class CommentForm extends Form
         ])->add([
             'type' => Hidden::class,
             'name' => 'refType'
+        ])->add([
+            'type' => Csrf::class,
+            'name' => 'csrf'
         ])->add([
             'type' => Submit::class,
             'name' => 'handler',
