@@ -18,8 +18,7 @@ use Zend\ModuleManager\Feature\BootstrapListenerInterface;
  */
 class Module implements
     ModuleInterface,
-    AutoloaderProviderInterface,
-    BootstrapListenerInterface
+    AutoloaderProviderInterface
 {
     /** @const VERSION */
     const VERSION = '1.0.2';
@@ -43,24 +42,5 @@ class Module implements
                 ],
             ],
         ];
-    }
-
-
-    /**
-     * Listen to the bootstrap event
-     *
-     * @param EventInterface $e
-     * @return array
-     */
-    public function onBootstrap(EventInterface $e)
-    {
-        // TODO: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        // Hard override
-        $e->getTarget()
-            ->getServiceManager()
-            ->get('ViewHelperManager')
-            ->get('partial')
-            ->setView($e->getTarget()
-                ->getServiceManager()->get('Zend\View\Renderer\PhpRenderer'));
     }
 }
