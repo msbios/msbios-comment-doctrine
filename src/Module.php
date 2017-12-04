@@ -22,7 +22,7 @@ class Module implements
     BootstrapListenerInterface
 {
     /** @const VERSION */
-    const VERSION = '1.0.1';
+    const VERSION = '1.0.2';
 
     public function getConfig()
     {

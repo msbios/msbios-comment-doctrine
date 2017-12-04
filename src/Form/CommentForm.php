@@ -45,7 +45,12 @@ class CommentForm extends Form
             'name' => 'refType'
         ])->add([
             'type' => Csrf::class,
-            'name' => 'csrf'
+            'name' => 'csrf',
+            'options' => [
+                'csrf_options' => [
+                    'timeout' => 600,
+                ],
+            ],
         ])->add([
             'type' => Submit::class,
             'name' => 'handler',

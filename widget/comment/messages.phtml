@@ -27,6 +27,7 @@ $form->prepare();
 </div>
 <?= $this->formElement($form->get('refId')); ?>
 <?= $this->formElement($form->get('refType')); ?>
+<?= $this->formElement($form->get('csrf')); ?>
 <?= $this->formButton()->render($form->get('handler')->setAttribute('class', 'btn btn-default'), 'Submit'); ?>
 <?= $this->form()->closeTag($form); ?>
 
