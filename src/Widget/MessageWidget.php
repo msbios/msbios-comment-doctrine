@@ -69,6 +69,10 @@ class MessageWidget implements
             'postdate' => 'DESC'
         ]);
 
+        if (isset($data['attributes']) && is_array($data['attributes'])) {
+            $this->formElement->setAttributes($data['attributes']);
+        }
+
         /** @var ModelInterface $viewModel */
         $viewModel = new ViewModel([
             'form' => $this->formElement->setData($defaultValues),
