@@ -6,23 +6,24 @@
 namespace MSBios\Comment\Doctrine;
 
 use MSBios\ModuleInterface;
-use Zend\EventManager\EventInterface;
 use Zend\Loader\AutoloaderFactory;
 use Zend\Loader\StandardAutoloader;
 use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
-use Zend\ModuleManager\Feature\BootstrapListenerInterface;
 
 /**
  * Class Module
- * @package MSBios\Application
+ * @package MSBios\Comment\Doctrine
  */
 class Module implements
     ModuleInterface,
     AutoloaderProviderInterface
 {
     /** @const VERSION */
-    const VERSION = '1.0.5';
+    const VERSION = '1.0.6';
 
+    /**
+     * @return mixed
+     */
     public function getConfig()
     {
         return include __DIR__ . '/../config/module.config.php';

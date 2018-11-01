@@ -91,9 +91,19 @@ class CommentPlugin extends AbstractPlugin implements ObjectManagerAwareInterfac
             /** @var EntityInterface $object */
             $objectManager->persist($object);
             $objectManager->flush();
+
             return true;
         }
 
         return false;
+    }
+
+    /**
+     * @return array|object
+     */
+    public function values()
+    {
+        return $this->form->isValid() ?
+            $this->form->getData() : [];
     }
 }

@@ -73,6 +73,16 @@ class CommentInputFilter extends InputFilter
                 ],
             ],
         ])->add([
+            'name' => 'redirect',
+            'required' => false,
+            'filters' => [
+                [
+                    'name' => StringTrim::class,
+                ], [
+                    'name' => StripTags::class,
+                ],
+            ],
+        ])->add([
             'name' => 'csrf',
             'required' => true,
             'validators' => [
