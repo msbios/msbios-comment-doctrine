@@ -101,15 +101,18 @@ class Comment extends Entity implements
      */
     private $options = [];
 
+    /**
+     * Comment constructor.
+     * @param null $adapter
+     */
     public function __construct($adapter = null)
     {
         parent::__construct($adapter);
 
-        $this->postdate = new \DateTime('now');
-        $this->createdAt = new \DateTime('now');
-        $this->modifiedAt = new \DateTime('now');
+        $this->postdate = new \DateTime;
+        $this->createdAt = new \DateTime;
+        $this->modifiedAt = new \DateTime;
     }
-
 
     /**
      * @return int

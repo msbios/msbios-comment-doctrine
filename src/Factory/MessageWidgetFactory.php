@@ -8,7 +8,6 @@ namespace MSBios\Comment\Doctrine\Factory;
 
 use Doctrine\ORM\EntityManager;
 use Interop\Container\ContainerInterface;
-use MSBios\Comment\Doctrine\Form\CommentForm;
 use MSBios\Comment\Doctrine\Widget\MessageWidget;
 use Zend\ServiceManager\Factory\FactoryInterface;
 
@@ -28,7 +27,7 @@ class MessageWidgetFactory implements FactoryInterface
     {
         return new MessageWidget(
             $container->get(EntityManager::class),
-            $container->get('FormElementManager')->get(CommentForm::class)
+            $container->get('FormElementManager')
         );
     }
 }
