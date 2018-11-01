@@ -18,7 +18,6 @@ use MSBios\Widget\WidgetInterface;
 use Zend\Form\FormElementManager\FormElementManagerV3Polyfill;
 use Zend\Form\FormInterface;
 use Zend\ServiceManager\PluginManagerInterface;
-use Zend\Stdlib\ArrayUtils;
 use Zend\View\Model\ModelInterface;
 use Zend\View\Model\ViewModel;
 
@@ -50,36 +49,37 @@ class MessageWidget implements
 
     /**
      * @param null $data
-     * @param array $defaultValues
+     * @param callable|null $callback
      * @return string
      */
-    public function output($data = null, array $defaultValues = [])
+    public function output($data = null, callable $callback = null)
     {
         if (! isset($data['refId'], $data['refType'])) {
             throw new InvalidArgumentException('You missed some of the required parameters');
         }
-
-        /** @var ObjectRepository $repository */
-        $repository = $this->getObjectManager()
-            ->getRepository(Comment::class);
-
-        /** @var array $result */
-        $result = $repository->findBy($data, [
-            'postdate' => 'DESC'
-        ]);
-
-        /** @var array $defaultValues */
-        $data = ArrayUtils::merge($data, $defaultValues);
 
         /** @var FormInterface|CommentForm $form */
         $form = $this->formElementManager
             ->get(CommentForm::class);
         $form->setData($data);
 
+        /** @var ObjectRepository $repository */
+        $repository = $this->getObjectManager()
+            ->getRepository(Comment::class);
+
+        /** @var array $comments */
+        $comments = $repository->findBy($data, [
+            'postdate' => 'DESC'
+        ]);
+
         /** @var ModelInterface $viewModel */
         $viewModel = new ViewModel([
-            'form' => $form, 'comments' => $result
+            'form' => $form, 'comments' => $comments
         ]);
+
+        if (! is_null($callback)) {
+            $callback($form, $comments, $viewModel);
+        }
 
         $viewModel->setTemplate('comment/messages');
         return $this->render($viewModel);
