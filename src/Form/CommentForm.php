@@ -3,7 +3,6 @@
  * @access protected
  * @author Judzhin Miles <info[woof-woof]msbios.com>
  */
-
 namespace MSBios\Comment\Doctrine\Form;
 
 use Zend\Form\Element\Checkbox;
@@ -43,6 +42,9 @@ class CommentForm extends Form
         ])->add([
             'type' => Hidden::class,
             'name' => 'refType'
+        ])->add([
+            'type' => Hidden::class,
+            'name' => 'redirect',
         ])->add([
             'type' => Csrf::class,
             'name' => 'csrf',

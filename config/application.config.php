@@ -6,6 +6,12 @@
 return [
     // Retrieve list of modules used in this application.
     'modules' => [
+        'MSBios\Cache',
+        'Zend\Serializer',
+        'MSBios\Hydrator',
+        'MSBios\Guard\Doctrine',
+        'MSBios\Paginator\Doctrine',
+        'MSBios\Validator',
         'MSBios\Portal\Doctrine',
         'Zend\Cache',
         'Zend\Paginator',
@@ -23,11 +29,9 @@ return [
         'Zend\Session',
         'Zend\Router',
         'Zend\Validator',
-
         'DoctrineModule',
         'DoctrineORMModule',
         'DoctrineDataFixtureModule',
-
         'MSBios\Form\Doctrine',
         'MSBios\Doctrine',
         'MSBios\Db',
@@ -54,8 +58,6 @@ return [
         'MSBios\Resource\Doctrine',
         'MSBios\CPanel\Doctrine',
         'MSBios\Comment\Doctrine',
-
-        'Zend\Log',
         'ZendDeveloperTools',
     ],
     // These are various options for the listeners attached to the ModuleManager

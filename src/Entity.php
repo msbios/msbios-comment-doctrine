@@ -13,5 +13,5 @@ use \MSBios\Resource\Doctrine\Entity as DefaultEntity;
  */
 abstract class Entity extends DefaultEntity
 {
-
+    // ...
 }

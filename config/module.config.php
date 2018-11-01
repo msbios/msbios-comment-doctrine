@@ -11,10 +11,10 @@ use Zend\ServiceManager\Factory\InvokableFactory;
 return [
 
     'doctrine' => [
-
         'configuration' => [
             'orm_default' => [
                 'types' => [
+                    // ...
                 ],
             ],
         ],
@@ -41,6 +41,7 @@ return [
         'entity_resolver' => [
             'orm_default' => [
                 'resolvers' => [
+                    // ...
                 ],
             ],
         ],
@@ -83,7 +84,8 @@ return [
 
     \MSBios\Widget\Module::class => [
         'template_map' => [
-            'comment/messages' => __DIR__ . '/../widget/comment/messages.phtml'
+            'comment/messages' =>
+                __DIR__ . '/../widget/comment/messages.phtml'
         ],
     ],
 ];

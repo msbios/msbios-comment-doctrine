@@ -22,7 +22,7 @@ use Zend\Validator\StringLength;
 class CommentInputFilter extends InputFilter
 {
     /**
-     *
+     * @inheritdoc
      */
     public function init()
     {
