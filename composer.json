@@ -1,7 +1,7 @@
 {
     "name": "msbios/comment-doctrine",
     "description": "MSBios Comment Doctrine",
-    "license": "GPL",
+    "license": "MIT",
     "keywords": [
         "php"
     ],
