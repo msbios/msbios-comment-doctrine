@@ -6,14 +6,8 @@
 return [
     // Retrieve list of modules used in this application.
     'modules' => [
-        'MSBios\Guard\DeveloperTools',
-        'MSBios\Cache',
+        'Zend\Log',
         'Zend\Serializer',
-        'MSBios\Hydrator',
-        'MSBios\Guard\Doctrine',
-        'MSBios\Paginator\Doctrine',
-        'MSBios\Validator',
-        'MSBios\Portal\Doctrine',
         'Zend\Cache',
         'Zend\Paginator',
         'Zend\Db',
@@ -30,9 +24,18 @@ return [
         'Zend\Session',
         'Zend\Router',
         'Zend\Validator',
+
         'DoctrineModule',
         'DoctrineORMModule',
         'DoctrineDataFixtureModule',
+
+        'MSBios\Guard\DeveloperTools',
+        'MSBios\Cache',
+        'MSBios\Hydrator',
+        'MSBios\Guard\Doctrine',
+        'MSBios\Paginator\Doctrine',
+        'MSBios\Validator',
+        'MSBios\Portal\Doctrine',
         'MSBios\Form\Doctrine',
         'MSBios\Doctrine',
         'MSBios\Db',

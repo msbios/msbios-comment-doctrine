@@ -6,7 +6,6 @@
 namespace MSBios\Comment\Doctrine\Controller;
 
 use Doctrine\Common\Persistence\ObjectManager;
-use Doctrine\Common\Persistence\ObjectManagerAware;
 use DoctrineModule\Persistence\ObjectManagerAwareInterface;
 use DoctrineModule\Stdlib\Hydrator\DoctrineObject;
 use MSBios\Authentication\IdentityInterface;
@@ -14,7 +13,6 @@ use MSBios\Comment\Doctrine\Entity\Comment;
 use MSBios\Comment\Doctrine\Form\CommentForm;
 use MSBios\Doctrine\ObjectManagerAwareTrait;
 use MSBios\Resource\Doctrine\EntityInterface;
-use Zend\Hydrator\HydratorInterface;
 use Zend\Mvc\Controller\AbstractActionController;
 
 /**
@@ -51,7 +49,6 @@ class CommentController extends AbstractActionController implements ObjectManage
     public function indexAction()
     {
         if ($this->getRequest()->isPost() && $identity = $this->identity()) {
-
             if ($this->form->setData($this->params()->fromPost())->isValid()) {
                 /** @var array $data */
                 $data = $this->form->getData();
@@ -83,8 +80,9 @@ class CommentController extends AbstractActionController implements ObjectManage
                 $this->getEventManager()
                     ->trigger(self::EVENT_COMMENT, $this, ['form' => $this->form]);
 
-                if ($redirect = $data['redirect']) {
-                    return $this->redirect()->toUrl(base64_decode($redirect));
+                if ($redirect = $this->params()->fromRoute('redirect', $data['redirect'])) {
+                    return $this->redirect()
+                        ->toUrl(base64_decode($redirect));
                 }
             } else {
                 $this->getEventManager()

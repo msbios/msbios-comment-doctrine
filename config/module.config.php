@@ -20,11 +20,14 @@ return [
                     'comment' => [
                         'type' => Segment::class,
                         'options' => [
-                            'route' => 'comment[/]',
+                            'route' => 'comment[/[:redirect]]',
                             'defaults' => [
                                 'controller' => Controller\CommentController::class,
-                                'action' => 'index'
+                                'action' => 'index',
                             ],
+                            'constraints' => [
+                                'redirect' => '[a-zA-Z0-9+/]+={0,2}'
+                            ]
                         ],
                         'may_terminate' => true,
                         'child_routes' => [
