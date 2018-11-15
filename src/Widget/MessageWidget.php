@@ -55,7 +55,7 @@ class MessageWidget implements
     public function output($data = null, callable $callback = null)
     {
         if (! isset($data['refId'], $data['refType'])) {
-            throw new InvalidArgumentException('You missed some of the required parameters');
+            throw new InvalidArgumentException('You missed some of the required parameters: refId or refType');
         }
 
         /** @var FormInterface|CommentForm $form */

@@ -5,13 +5,14 @@
  */
 namespace MSBios\Comment\Doctrine\Controller;
 
+use MSBios\Guard\GuardInterface;
 use Zend\Mvc\Controller\AbstractActionController;
 
 /**
  * Class IndexController
  * @package MSBios\Comment\Doctrine\Controller
  */
-class IndexController extends AbstractActionController
+class IndexController extends AbstractActionController implements GuardInterface
 {
     public function indexAction()
     {

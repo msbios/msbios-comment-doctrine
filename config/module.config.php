@@ -6,9 +6,47 @@
 namespace MSBios\Comment\Doctrine;
 
 use MSBios\Doctrine\Initializer\ObjectManagerInitializer;
+use Zend\Router\Http\Method;
+use Zend\Router\Http\Segment;
 use Zend\ServiceManager\Factory\InvokableFactory;
 
 return [
+
+    'router' => [
+        'routes' => [
+            'home' => [
+                'may_terminate' => true,
+                'child_routes' => [
+                    'comment' => [
+                        'type' => Segment::class,
+                        'options' => [
+                            'route' => 'comment[/]',
+                            'defaults' => [
+                                'controller' => Controller\CommentController::class,
+                                'action' => 'index'
+                            ],
+                        ],
+                        'may_terminate' => true,
+                        'child_routes' => [
+                            [
+                                'type' => Method::class,
+                                'options' => [
+                                    'verb' => 'post'
+                                ]
+                            ]
+                        ]
+                    ],
+                ],
+            ],
+        ],
+    ],
+
+    'controllers' => [
+        'factories' => [
+            Controller\CommentController::class =>
+                Factory\CommentControllerFactory::class,
+        ]
+    ],
 
     'doctrine' => [
         'configuration' => [

@@ -6,6 +6,7 @@
 return [
     // Retrieve list of modules used in this application.
     'modules' => [
+        'MSBios\Guard\DeveloperTools',
         'MSBios\Cache',
         'Zend\Serializer',
         'MSBios\Hydrator',

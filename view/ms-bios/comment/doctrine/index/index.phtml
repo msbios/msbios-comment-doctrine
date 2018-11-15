@@ -6,9 +6,13 @@
 
 namespace MSBios\Comment\Doctrine;
 
+use Zend\Form\FormInterface;
+
 ?>
     <h1>Comment Module</h1>
 <?= $this->widget(Widget\MessageWidget::class, [
     'refId' => 1,
     'refType' => 'PERSONS'
-]); ?>
+], function(FormInterface $form) {
+    $form->setAttribute('action', $this->url('home/comment'));
+}); ?>

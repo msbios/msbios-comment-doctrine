@@ -54,4 +54,24 @@ return [
             __DIR__ . '/../../vendor/msbios/application/themes/default/public/'
         ],
     ],
+
+    \MSBios\Guard\Module::class => [
+        // Resource providers to be used to load all available resources into Zend\Permissions\Acl\Acl
+        // Keys are the provider service names, values are the options to be passed to the provider
+        'resource_providers' => [
+            \MSBios\Guard\Provider\ResourceProvider::class => [
+                Controller\IndexController::class
+            ]
+        ],
+        // Rule providers to be used to load all available rules into Zend\Permissions\Acl\Acl
+        // Keys are the provider service names, values are the options to be passed to the provider
+        'rule_providers' => [
+            \MSBios\Guard\Provider\RuleProvider::class => [
+                'allow' => [
+                    [['USER'], Controller\IndexController::class],
+                ],
+                'deny' => []
+            ]
+        ],
+    ],
 ];
