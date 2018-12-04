@@ -5,7 +5,6 @@
  */
 namespace MSBios\Comment\Doctrine;
 
-use MSBios\Doctrine\Initializer\ObjectManagerInitializer;
 use Zend\Router\Http\Method;
 use Zend\Router\Http\Segment;
 use Zend\ServiceManager\Factory\InvokableFactory;
@@ -52,14 +51,6 @@ return [
     ],
 
     'doctrine' => [
-        'configuration' => [
-            'orm_default' => [
-                'types' => [
-                    // ...
-                ],
-            ],
-        ],
-
         'driver' => [
             // defines an annotation driver with two paths, and names it `my_annotation_driver`
             Module::class => [
@@ -74,31 +65,10 @@ return [
             // Override `orm_default` only if you know what you're doing
             'orm_default' => [
                 'drivers' => [
-                    Entity::class => Module::class
+                    Entity::class =>
+                        Module::class
                 ]
             ],
-        ],
-
-        'entity_resolver' => [
-            'orm_default' => [
-                'resolvers' => [
-                    // ...
-                ],
-            ],
-        ],
-    ],
-
-    'controller_plugins' => [
-        'factories' => [
-            Controller\Plugin\CommentPlugin::class =>
-                Factory\CommentPluginFactory::class,
-        ],
-        'aliases' => [
-            'comment' =>
-                Controller\Plugin\CommentPlugin::class
-        ],
-        'initializers' => [
-            new ObjectManagerInitializer
         ],
     ],
 

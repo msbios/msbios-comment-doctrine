@@ -7,11 +7,11 @@ namespace MSBios\Comment\Doctrine\Controller;
 
 use Doctrine\Common\Persistence\ObjectManager;
 use DoctrineModule\Persistence\ObjectManagerAwareInterface;
+use DoctrineModule\Persistence\ProvidesObjectManager;
 use DoctrineModule\Stdlib\Hydrator\DoctrineObject;
 use MSBios\Authentication\IdentityInterface;
 use MSBios\Comment\Doctrine\Entity\Comment;
 use MSBios\Comment\Doctrine\Form\CommentForm;
-use MSBios\Doctrine\ObjectManagerAwareTrait;
 use MSBios\Resource\Doctrine\EntityInterface;
 use Zend\Mvc\Controller\AbstractActionController;
 
@@ -21,7 +21,7 @@ use Zend\Mvc\Controller\AbstractActionController;
  */
 class CommentController extends AbstractActionController implements ObjectManagerAwareInterface
 {
-    use ObjectManagerAwareTrait;
+    use ProvidesObjectManager;
 
     /** @var CommentForm */
     protected $form;
@@ -90,6 +90,8 @@ class CommentController extends AbstractActionController implements ObjectManage
             }
         }
 
-        return $this->redirect()->toRoute('home');
+        return $this
+            ->redirect()
+            ->toRoute('home');
     }
 }
