@@ -12,4 +12,5 @@ namespace MSBios\Comment\Doctrine\Exception;
  */
 class InvalidArgumentException extends \InvalidArgumentException
 {
+    // ...
 }

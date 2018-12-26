@@ -103,12 +103,9 @@ class Comment extends Entity implements
 
     /**
      * Comment constructor.
-     * @param null $adapter
      */
-    public function __construct($adapter = null)
+    public function __construct()
     {
-        parent::__construct($adapter);
-
         $this->postdate = new \DateTime;
         $this->createdAt = new \DateTime;
         $this->modifiedAt = new \DateTime;
@@ -124,10 +121,12 @@ class Comment extends Entity implements
 
     /**
      * @param int $refId
+     * @return $this
      */
     public function setRefId(int $refId)
     {
         $this->refId = $refId;
+        return $this;
     }
 
     /**
@@ -140,10 +139,12 @@ class Comment extends Entity implements
 
     /**
      * @param string $refType
+     * @return $this
      */
     public function setRefType(string $refType)
     {
         $this->refType = $refType;
+        return $this;
     }
 
     /**
@@ -156,10 +157,12 @@ class Comment extends Entity implements
 
     /**
      * @param Comment $parent
+     * @return $this
      */
     public function setParent(Comment $parent)
     {
         $this->parent = $parent;
+        return $this;
     }
 
     /**
@@ -172,10 +175,12 @@ class Comment extends Entity implements
 
     /**
      * @param string $author
+     * @return $this
      */
     public function setAuthor(string $author)
     {
         $this->author = $author;
+        return $this;
     }
 
     /**
@@ -188,10 +193,12 @@ class Comment extends Entity implements
 
     /**
      * @param string $message
+     * @return $this
      */
     public function setMessage(string $message)
     {
         $this->message = $message;
+        return $this;
     }
 
     /**
@@ -204,10 +211,12 @@ class Comment extends Entity implements
 
     /**
      * @param bool $anonymously
+     * @return $this
      */
     public function setAnonymously(bool $anonymously)
     {
         $this->anonymously = $anonymously;
+        return $this;
     }
 
     /**
@@ -220,10 +229,12 @@ class Comment extends Entity implements
 
     /**
      * @param string $authorIp
+     * @return $this
      */
     public function setAuthorIp(string $authorIp)
     {
         $this->authorIp = $authorIp;
+        return $this;
     }
 
     /**
@@ -236,10 +247,12 @@ class Comment extends Entity implements
 
     /**
      * @param \DateTime $postdate
+     * @return $this
      */
     public function setPostdate(\DateTime $postdate)
     {
         $this->postdate = $postdate;
+        return $this;
     }
 
     /**
@@ -252,10 +265,12 @@ class Comment extends Entity implements
 
     /**
      * @param string $state
+     * @return $this
      */
     public function setState(string $state)
     {
         $this->state = $state;
+        return $this;
     }
 
     /**
@@ -268,9 +283,11 @@ class Comment extends Entity implements
 
     /**
      * @param string $options
+     * @return $this
      */
     public function setOptions(string $options)
     {
         $this->options = $options;
+        return $this;
     }
 }
