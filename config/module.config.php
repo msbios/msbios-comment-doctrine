@@ -3,8 +3,10 @@
  * @access protected
  * @author Judzhin Miles <info[woof-woof]msbios.com>
  */
+
 namespace MSBios\Comment\Doctrine;
 
+use MSBios\Form\Factory\FormElementManagerableFactory;
 use Zend\Router\Http\Method;
 use Zend\Router\Http\Segment;
 use Zend\ServiceManager\Factory\InvokableFactory;
@@ -46,7 +48,7 @@ return [
     'controllers' => [
         'factories' => [
             Controller\CommentController::class =>
-                Factory\CommentControllerFactory::class,
+                FormElementManagerableFactory::class,
         ]
     ],
 
@@ -90,6 +92,16 @@ return [
         'factories' => [
             Widget\MessageWidget::class =>
                 Factory\MessageWidgetFactory::class
+        ]
+    ],
+
+    'translator' => [
+        'translation_file_patterns' => [
+            [
+                'type' => 'gettext',
+                'base_dir' => __DIR__ . '/../language/',
+                'pattern' => '%s.mo',
+            ]
         ]
     ],
 

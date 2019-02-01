@@ -1,0 +1,355 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MSBios\n"
+"POT-Creation-Date: 2019-02-01 16:52+0200\n"
+"PO-Revision-Date: 2019-02-01 16:52+0200\n"
+"Last-Translator: \n"
+"Language-Team: MSBios Team <info@msbios.com>\n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.6\n"
+"X-Poedit-Basepath: ../src\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: _;addSuccessMessage\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: Controller/CommentController.php:84 Controller/IndexController.php:25
+msgid "Your comment has been added."
+msgstr "Ваш комментарий был добавлен."
+
+#~ msgid "Reorganized"
+#~ msgstr "Реорганизовано"
+
+#~ msgid "Suspended activity"
+#~ msgstr "Деятельность прекращена"
+
+#~ msgid "Not allowed"
+#~ msgstr "Запрещено "
+
+#~ msgid "None"
+#~ msgstr "Не выбрано"
+
+#~ msgid "Accepted"
+#~ msgstr "Принято"
+
+#~ msgid "Consideration"
+#~ msgstr "Внесено на рассмотрение"
+
+#~ msgid "Into operation"
+#~ msgstr "Введено в действие"
+
+#~ msgid "Expired"
+#~ msgstr "Утратил силу"
+
+#~ msgid "Criminal proceedings"
+#~ msgstr "Уголовное производство"
+
+#~ msgid "Is running"
+#~ msgstr "За границами государства"
+
+#~ msgid "Condemned"
+#~ msgstr "Осуждено"
+
+#~ msgid "Predesignated"
+#~ msgstr "Назначено"
+
+#~ msgid "Municipality"
+#~ msgstr "Депутат ОМС"
+
+#~ msgid "Verkhovna Rada"
+#~ msgstr "Депутат ВРУ"
+
+#~ msgid "Citizen of Ukraine"
+#~ msgstr "Гражданин Украины"
+
+#~ msgid "Citizen of another country"
+#~ msgstr "Гражданин другой страны"
+
+#~ msgid "Statelessness"
+#~ msgstr "Безгражданство"
+
+#~ msgid "Multiple citizenship"
+#~ msgstr "Многократное гражданство"
+
+#~ msgid "Personal email"
+#~ msgstr "Личный e-mail"
+
+#~ msgid "Work email"
+#~ msgstr "Рабочий e-mail"
+
+#~ msgid "Reception"
+#~ msgstr "Приёмная"
+
+#~ msgid "Suite"
+#~ msgstr "Сайт"
+
+#~ msgid "Receipt"
+#~ msgstr "График приёма граждан"
+
+#~ msgid "Address"
+#~ msgstr "Почтовый адрес "
+
+#~ msgid "Vocational education"
+#~ msgstr "Профессионально-техническое образование"
+
+#~ msgid "Incomplete higher education"
+#~ msgstr "Неоконченное высшее образование"
+
+#~ msgid "Higher Education"
+#~ msgstr "Высшее образование"
+
+#~ msgid "Two and more higher education"
+#~ msgstr "Два и более высших образования"
+
+#~ msgid "Academic degree"
+#~ msgstr "Ученая степень"
+
+#~ msgid "Facebook"
+#~ msgstr "Facebook"
+
+#~ msgid "Twitter"
+#~ msgstr "Twitter"
+
+#~ msgid "Youtube"
+#~ msgstr "Youtube"
+
+#~ msgid "Google"
+#~ msgstr "Google"
+
+#~ msgid "Instagram"
+#~ msgstr "Instagram"
+
+#~ msgid "Telegram"
+#~ msgstr "Telegram"
+
+#~ msgid "LinkedIn"
+#~ msgstr "LinkedIn"
+
+#~ msgid "Flickr"
+#~ msgstr "Flickr"
+
+#~ msgid "MySpace"
+#~ msgstr "MySpace"
+
+#~ msgid "VK"
+#~ msgstr "VK"
+
+#~ msgid "Person"
+#~ msgstr "Персоны"
+
+#~ msgid "Institution"
+#~ msgstr "Учреждения"
+
+#~ msgid "Consignment"
+#~ msgstr "Партии"
+
+#~ msgid "Documents"
+#~ msgstr "Документы"
+
+#~ msgid "Draft"
+#~ msgstr "Черновик"
+
+#~ msgid "Preview"
+#~ msgstr "Сокращенный профиль"
+
+#~ msgid "Ready"
+#~ msgstr "Полный профиль"
+
+#~ msgid "President"
+#~ msgstr "Президент Украины"
+
+#~ msgid "Legislative"
+#~ msgstr "Законодательная власть и органы местного самоуправления"
+
+#~ msgid "Executive"
+#~ msgstr "Исполнительная власть"
+
+#~ msgid "Judicial"
+#~ msgstr "Судебная власть"
+
+#~ msgid "Procuracy"
+#~ msgstr "Органы прокуратуры"
+
+#~ msgid "Communal"
+#~ msgstr "Государственные и коммунальные предприятия"
+
+#~ msgid "Others"
+#~ msgstr "Другое"
+
+#~ msgid "Document"
+#~ msgstr "Документ"
+
+#~ msgid "Ukraine"
+#~ msgstr "Всеукраинский"
+
+#~ msgid "Region"
+#~ msgstr "Региональный"
+
+#~ msgid "District"
+#~ msgstr "Областной"
+
+#~ msgid "City"
+#~ msgstr "Местный"
+
+#~ msgid "Area"
+#~ msgstr "Районный в области"
+
+#~ msgid "Pupil"
+#~ msgstr "Ученица"
+
+#~ msgid "Student"
+#~ msgstr "Ученик"
+
+#~ msgid "Pensioner"
+#~ msgstr "Пенсионер"
+
+#~ msgid "Top-management"
+#~ msgstr "Высшее руководство"
+
+#~ msgid "Self-employment"
+#~ msgstr "Работа на себя"
+
+#~ msgid "Legal person"
+#~ msgstr "Законопослушный гражданин"
+
+#~ msgid "Civil service"
+#~ msgstr "Гражданская служба"
+
+#~ msgid "Teacher, lecturer, scientific research worker"
+#~ msgstr "Преподаватель, преподаватель, научный сотрудник"
+
+#~ msgid "Wage labor"
+#~ msgstr "Наемный труд"
+
+#~ msgid "Unemployment"
+#~ msgstr "безработица"
+
+#~ msgid "Other"
+#~ msgstr "Другой"
+
+#~ msgid "Education &amp; Science"
+#~ msgstr "Образование & Наука"
+
+#~ msgid "Trade"
+#~ msgstr "Сделка"
+
+#~ msgid "Healthcare"
+#~ msgstr "Здравоохранение"
+
+#~ msgid "Industry"
+#~ msgstr "Промышленность"
+
+#~ msgid "Service sector"
+#~ msgstr "Сектор обслуживания"
+
+#~ msgid "Social sphere, volunteering, public organizations"
+#~ msgstr "Социальная сфера, волонтерство, общественные организации"
+
+#~ msgid "Law Enforcement / Army / Security"
+#~ msgstr "Правоохранительные органы / Армия / Безопасность"
+
+#~ msgid "Agriculture"
+#~ msgstr "сельское хозяйство"
+
+#~ msgid "Jurisprudence / law"
+#~ msgstr "Юриспруденция / право"
+
+#~ msgid "Finances, bank, insurance"
+#~ msgstr "Финансы, банк, страхование"
+
+#~ msgid "Transport"
+#~ msgstr "Транспорт"
+
+#~ msgid "Telecommunications"
+#~ msgstr "Cвязь"
+
+#~ msgid "Construction, architecture"
+#~ msgstr "Строительство, архитектура"
+
+#~ msgid "Sport"
+#~ msgstr "Спорт"
+
+#~ msgid "Journalism"
+#~ msgstr "Журналистика"
+
+#~ msgid "Housing and communal services"
+#~ msgstr "Государственные и коммунальные предприятия"
+
+#~ msgid "Tourism"
+#~ msgstr "туризм"
+
+#~ msgid "Culture, showbusiness, music"
+#~ msgstr "Культура, шоу-бизнес, музыка"
+
+#~ msgid "LiveJournal"
+#~ msgstr "LiveJournal"
+
+#~ msgid "Pinterest"
+#~ msgstr "Pinterest"
+
+#~ msgid "Vine"
+#~ msgstr "Vine"
+
+#~ msgid "Tumblr"
+#~ msgstr "Tumblr"
+
+#~ msgid "Storify"
+#~ msgstr "Storify"
+
+#~ msgid "Blogger"
+#~ msgstr "Blogger"
+
+#~ msgid "persons"
+#~ msgstr "персоны"
+
+#~ msgid "Drank dyalnil"
+#~ msgstr "Прекращена деятельность"
+
+#~ msgid "LEGISLATIVE"
+#~ msgstr "Законодательная власть и местное самоуправление"
+
+#~ msgid "EXECUTIVE"
+#~ msgstr "Исполнительная власть"
+
+#~ msgid "JUDICIAL"
+#~ msgstr "Судебная власть и конституционные органы"
+
+#~ msgid "COMMUNAL"
+#~ msgstr "Коммунальные предприятия"
+
+#~ msgid "UKRAINE"
+#~ msgstr "Всеукраинского значения"
+
+#~ msgid "REGION"
+#~ msgstr "Областного значения"
+
+#~ msgid "DISTRICT"
+#~ msgstr "Районного в области значения"
+
+#~ msgid "CITY"
+#~ msgstr "Городского значения"
+
+#~ msgid "AREA"
+#~ msgstr "Районного в городе значения"
+
+#~ msgid "MONITORING"
+#~ msgstr "Контролирующие органы"
+
+#~ msgid "All-Ukrainian significance"
+#~ msgstr "Всеукраинского значения"
+
+#~ msgid "Regional Value"
+#~ msgstr "Областного значения"
+
+#~ msgid "Rayon in the field value"
+#~ msgstr "Районного в области значения"
+
+#~ msgid "City value"
+#~ msgstr "Городского значения"
+
+#~ msgid "Rayon values in the city"
+#~ msgstr "Районного в городе значения"

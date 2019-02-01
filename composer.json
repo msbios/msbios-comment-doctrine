@@ -38,11 +38,6 @@
         ],
         "test-coverage": "phpunit --colors=always --coverage-clover clover.xml",
         "upload-coverage": "coveralls -v",
-        "themes": [
-            "cd public && ln -s ../vendor/msbios/application/themes/default/public default",
-            "cd public && ln -s ../vendor/msbios/cpanel/themes/limitless/public limitless"
-        ],
-        "alter": "./vendor/bin/doctrine-module orm:schema-tool:update --force",
         "serve": "php -S 0.0.0.0:3107 -t public public/index.php"
     },
     "extra": {
