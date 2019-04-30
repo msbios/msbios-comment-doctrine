@@ -8,10 +8,10 @@ namespace MSBios\Comment\Doctrine\Controller\Plugin;
 
 use Doctrine\Common\Persistence\ObjectManager;
 use DoctrineModule\Persistence\ObjectManagerAwareInterface;
+use DoctrineModule\Persistence\ProvidesObjectManager;
 use DoctrineModule\Stdlib\Hydrator\DoctrineObject;
 use MSBios\Authentication\IdentityInterface;
 use MSBios\Comment\Doctrine\Entity\Comment;
-use MSBios\Doctrine\ObjectManagerAwareTrait;
 use MSBios\Resource\Doctrine\EntityInterface;
 use Zend\Form\FormInterface;
 use Zend\Hydrator\HydratorInterface;
@@ -25,7 +25,7 @@ use Zend\Stdlib\RequestInterface;
  */
 class CommentPlugin extends AbstractPlugin implements ObjectManagerAwareInterface
 {
-    use ObjectManagerAwareTrait;
+    use ProvidesObjectManager;
 
     /** @var FormInterface */
     protected $form;
@@ -38,6 +38,7 @@ class CommentPlugin extends AbstractPlugin implements ObjectManagerAwareInterfac
 
     /**
      * CommentPlugin constructor.
+     *
      * @param FormInterface $form
      * @param PluginInterface $identity
      * @param RequestInterface $request

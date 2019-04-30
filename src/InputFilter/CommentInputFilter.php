@@ -113,4 +113,21 @@ class CommentInputFilter extends InputFilter
             ]
         ]);
     }
+
+    /**
+     * @return array|object
+     */
+    public function getUnfilteredData()
+    {
+        // TODO: Implement getUnfilteredData() method.
+    }
+
+    /**
+     * @param array|object $data
+     * @return $this
+     */
+    public function setUnfilteredData($data)
+    {
+        // TODO: Implement setUnfilteredData() method.
+    }
 }

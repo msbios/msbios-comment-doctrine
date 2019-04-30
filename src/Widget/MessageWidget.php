@@ -8,10 +8,10 @@ namespace MSBios\Comment\Doctrine\Widget;
 use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\Common\Persistence\ObjectRepository;
 use DoctrineModule\Persistence\ObjectManagerAwareInterface;
+use DoctrineModule\Persistence\ProvidesObjectManager;
 use MSBios\Comment\Doctrine\Entity\Comment;
 use MSBios\Comment\Doctrine\Exception\InvalidArgumentException;
 use MSBios\Comment\Doctrine\Form\CommentForm;
-use MSBios\Doctrine\ObjectManagerAwareTrait;
 use MSBios\Widget\RendererWidgetAwareInterface;
 use MSBios\Widget\RendererWidgetAwareTrait;
 use MSBios\Widget\WidgetInterface;
@@ -31,7 +31,7 @@ class MessageWidget implements
     ObjectManagerAwareInterface
 {
     use RendererWidgetAwareTrait;
-    use ObjectManagerAwareTrait;
+    use ProvidesObjectManager;
 
     /** @var PluginManagerInterface|FormElementManagerV3Polyfill */
     protected $formElementManager;

@@ -22,7 +22,9 @@ class CommentForm extends Form
     const IDENTIFIER = self::class;
 
     /**
+     * @inheritdoc
      *
+     * @return $this|void
      */
     public function init()
     {
@@ -60,5 +62,7 @@ class CommentForm extends Form
                 'value' => self::IDENTIFIER
             ]
         ]);
+
+        return $this;
     }
 }

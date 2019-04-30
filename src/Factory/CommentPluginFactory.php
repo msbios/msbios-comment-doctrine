@@ -19,6 +19,8 @@ class CommentPluginFactory implements FactoryInterface
 {
 
     /**
+     * @inheritdoc
+     *
      * @param ContainerInterface $container
      * @param string $requestedName
      * @param array|null $options
